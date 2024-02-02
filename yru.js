@@ -1,96 +1,114 @@
-// mendeklarasikan variabel
-let animal;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animal Variable</title> 
+</head>
+<body>
 
-// Tipe data 
-var namaSaya = "akbar"
-var umurSaya = 18
+<script>
+  // Deklarasi variabel animal menggunakan let
+  let animal;
 
-// Operator aritmatika 
+   // tipe data
+   let namagw = "zainuri"
+let umurSaya = 17;
+
+// operator js 
 const penjumlahan = 10 + 5
 const modulus = penjumlahan % 4
 const pangkat = modulus ** 3
 
-// Assignment operator 
+// assignment js 
 let umur = 10;
-umur +=5;
-console.log(umur);
+umur += 5;
 
-// String operator 
+// string 
 let kalimat = 'Hello ';
-kalimat += 'world';
-console.log(kalimat);
+kalimat += "World";
 
-// mendeklarasikan fungsi 
+// fungsi 
 function namaSaya() {
     return "Selamat Pagi!";
   }
-  console.log(namaSaya()); 
+  
+  console.log(namaSaya());
+  
   let berkenalan = function() {
     return "Hallo, nama saya Sarah.";
   };
-  console.log(berkenalan()); 
-
-// parameter dan argument 
-function luasPersegi(s) {
-    return s * s;
+  
+  console.log(berkenalan());
+  
+  // parameter 
+  function namayada() {
+    return "Selamat Pagi!";
   }
-  const luas = luasPersegi(5);
-  console.log(luas); // 25
-
-//   menggunakan object literal 
-let saya = new Object();
-
+  
+  console.log(namayada());
+  
+  let bilek = function() {
+    return "Hallo, nama saya Sarah.";
+  };
+  
+  console.log(bilek());
+  
+  // objek 
+  let saya = new Object();
 saya.nama = 'sarah';
 saya.umur = 24;
 
-// dot notation 
+// property 
 let manusia = {
     kepala: true,
     badan: true,
-    tangan: true,
-   
+    tangan: true
   };
-   manusia.ekor = false
+  
+  manusia.ekor = false;
+  
   console.log(manusia);
-
-//   menghapus properti objek 
-let tubuh = {
+  
+  // delete object 
+  let tubuh = {
     bugar: true,
     sehat: true,
     roda: 2
 };
 delete tubuh.roda;
 
-// object method 
+
+// objek method 
 let kucing = {
     lucu: true,
     kaki: 4,
+    suara: function() {
+      return 'Meong';
+    }
   };
-  
-  Object.defineProperty(kucing, "suara", {
-    value: function() {
-      return "Meong";
-    },
-  });
-  
-  console.log(kucing.suara()); // Meong 
 
-//   mendeklarasikan array 
-let hewan = new Array( 'burung hantu', 'gajah', 'laba laba');
-  
-//   mengubah data/element pada array 
-let warna = ['hitam', 'merah', 'ungu', 'kuning'];
+  // array 
+  let hewan = ['kucing', 'buaya', 'pepaya']
+
+  // array data 
+  let warna = ['hitam', 'merah', 'ungu', 'kuning'];
+
 warna[3] = 'biru';
-console.log(warna);
 
-// method objek math 
-let bilangan = 100;
+// objek math 
+let bilangan = 0;
 
 let pow = Math.pow(bilangan, 2);
-let sqrt = Math.sqrt(bilangan, 40);
+let sqrt = Math.sqrt(36 + bilangan);
+
+bilangan = Math.pow(Math.ceil(sqrt), 2);
+
 let max = Math.max(bilangan, 2.3, 8.5);
 
-// menggunakn if, else if dan else
+bilangan = Math.ceil(max);
+
+// perulangan 
 function ganjilGenap(platNomor) {
     if (platNomor % 2 === 1) {
       return "Ganjil";
@@ -99,86 +117,93 @@ function ganjilGenap(platNomor) {
     }
   }
   
-  // Contoh penggunaan fungsi
   let plat1 = 123;
   let plat2 = 246;
   
-  console.log(ganjilGenap(plat1)); // Output: "Ganjil"
-  console.log(ganjilGenap(plat2)); // Output: "Genap"
-  
-//   for loop 
-let angka = [1, 46, 75, 12, 89, 54, 101];
+  // forloop 
+  let angka = [1, 46, 75, 12, 89, 54, 101];
 let genap = [];
 
-// 1. Push angka-angka genap dari variabel angka ke dalam variabel genap dengan menggunakan for loop
 for (let i = 0; i < angka.length; i++) {
   if (angka[i] % 2 === 0) {
     genap.push(angka[i]);
   }
 }
 
-// 2. Variabel genap harus berisi [46, 12, 54]
-console.log(genap); // Output: [46, 12, 54]
-
-// 3. Jangan ubah variabel angka
-console.log(angka); // Output: [1, 46, 75, 12, 89, 54, 101]
-
-// for/ of loop 
-// let angka = [1, 46, 75, 12, 89, 54, 101];
+// for or loop 
+let anda = [1, 46, 75, 12, 89, 54, 101];
 let ganjil = [];
 
-// 1. Push angka-angka ganjil dari variabel angka ke dalam variabel ganjil dengan menggunakan for...of loop
 for (const num of angka) {
   if (num % 2 === 1) {
     ganjil.push(num);
   }
 }
 
-// 2. Variabel ganjil harus berisi [1, 75, 89, 101]
-console.log(ganjil); // Output: [1, 75, 89, 101]
+// while loop
+let anada = [];
 
-// 3. Jangan ubah variabel angka
-console.log(angka); // Output: [1, 46, 75, 12, 89, 54, 101]
-
-// while loop 
-// let angka = [];
-
-// 1. Masukkan angka 5 sampai 0 dengan urutan menurun ke dalam array angka menggunakan while loop
 let i = 5;
 while (i >= 0) {
   angka.push(i);
   i--;
 }
 
-// 2. Variabel angka harus sama dengan [5, 4, 3, 2, 1, 0]
-console.log(angka); // Output: [5, 4, 3, 2, 1, 0]
-
 // do while loop 
-// let angka = [];
-// let i = 5;
+let king = [];
+let pa = 5;
 
-// 1. Ubah while menjadi do...while sehingga dapat melakukan perulangan untuk memasukkan nilai i ke dalam variabel angka. Loop akan berhenti jika variabel i bernilai 11
 do {
   angka.push(i);
   i++;
 } while (i < 11);
 
-// 2. Variable angka harus sama dengan [5, 6, 7, 8, 9, 10]
-console.log(angka); // Output: [5, 6, 7, 8, 9, 10]
-
-// 3. Variable i harus sama dengan 11
-console.log(i); // Output: 11
-
 // default parameter 
-function warnaKesukaan(warna = "putih"){
-    return "Warna kesukaan saya adalah" + warna;
+function warnaKesukaan(warna = "putih") {
+    return "Warna kesukaan saya adalah " + warna;
 }
-console.log(warnaKesukaan());
 
-// rest parameter dan spread operator 
+let hasil = warnaKesukaan();
+
+// rest parameter 
 const namaBuah1 = ["apel", "mangga"];
 const namaBuah2 = ["sirsak", "semangka"];
 
 const semuaNamaBuah = [...namaBuah1, ...namaBuah2];
 
-console.log(semuaNamaBuah);  // Output: ["apel", "mangga", "sirsak", "semangka"]
+console.log(semuaNamaBuah);
+console.log(hasil);
+
+hasil = warnaKesukaan("biru");
+console.log(hasil);
+console.log(king); 
+console.log(pa);
+console.log(anada);
+console.log(ganjil);
+console.log(anda);
+console.log(genap);
+console.log(angka);
+console.log(ganjilGenap(plat1));
+console.log(ganjilGenap(plat2));  
+console.log(bilangan);
+console.log(warna);
+console.log(hewan);
+console.log(kucing);
+console.log(kalimat);
+console.log (umurSaya);
+console.log (penjumlahan);
+console.log (modulus);
+console.log (pangkat);
+console.log (umur);
+console.log (kalimat);
+console.log (saya.nama, saya.umur);
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
